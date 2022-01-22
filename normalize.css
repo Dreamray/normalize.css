@@ -13,6 +13,15 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
+/**
+ * All elements box-sizing
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Sections
    ========================================================================== */
 
