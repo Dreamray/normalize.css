@@ -8,11 +8,6 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-
 /**
  * All elements box-sizing
  */
@@ -20,6 +15,11 @@ html {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -51,6 +51,27 @@ h1 {
   margin: 0.67em 0;
 }
 
+/**
+ * Remove the margin/padding on `h1``h2``h3``p``figure``menu``fieldset`
+ */
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+figure{
+  margin: 0;
+}
+
+menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
 /* Grouping content
    ========================================================================== */
 
@@ -68,11 +89,14 @@ hr {
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
+ * 3. Remove the margin
  */
 
 pre {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
+  margin-top: 0; /* 3 */
+  margin-bottom: 0; /* 3 */
 }
 
 /* Text-level semantics
